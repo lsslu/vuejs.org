@@ -359,7 +359,7 @@ type: api
   })
   ```
 
-- **另见:** [Reactivity in Depth](/guide/reactivity.html)
+- **另见:** [深入响应式原理](/guide/reactivity.html)
 
 ### props
 
@@ -407,8 +407,10 @@ type: api
 ### propsData
 
 - **Type:** `{ [key: string]: any }`
+- **类型:** `{ [key: string]: any }`
 
 - **Restriction:** only respected in instance creation via `new`.
+- **限制:** only respected in instance creation via `new`.
 
 - **Details:**
 
