@@ -824,36 +824,50 @@ type: api
 - **See also:** [Functional Components](/guide/render-function.html#Functional-Components)
 
 ## Instance Properties
+##  实例属性
 
 ### vm.$data
 
 - **Type:** `Object`
+- **类型:** `Object`
 
 - **Details:**
+- **详细:**
 
   The data object that the Vue instance is observing. You can swap it with a new object. The Vue instance proxies access to the properties on its data object.
+  Vue实例绑定的数据对象是可观察的。你可以使用一个新的对象去替换它。Vue实例则代理了它的数据对象的属性的访问。
+  
 
 - **See also:** [Options - data](#data)
+- **你也可以参考这里:** [Options - data](#data)
 
 ### vm.$el
 
 - **Type:** `HTMLElement`
+- **类型:** `HTMLElement`
 
 - **Read only**
+- **只读**
 
 - **Details:**
+- **详细:**
 
   The root DOM element that the Vue instance is managing.
+  Vue实例管理挂载的根元素节点.
 
 ### vm.$options
 
 - **Type:** `Object`
+- **类型:** `Object`
 
 - **Read only**
+- **只读**
 
 - **Details:**
+- **详细:**
 
   The instantiation options used for the current Vue instance. This is useful when you want to include custom properties in the options:
+  当前实例的初始化选项。当你想在选项中包含一个自定义属性时很有用处：
 
   ``` js
   new Vue({
@@ -867,58 +881,81 @@ type: api
 ### vm.$parent
 
 - **Type:** `Vue instance`
+- **类型:** `Vue 实例`
 
 - **Read only**
+- **只读**
 
 - **Details:**
+- **详细:**
 
   The parent instance, if the current instance has one.
+  如果当前Vue实例存在父实例的话，这个代表它的父实例。
 
 ### vm.$root
 
 - **Type:** `Vue instance`
+- **类型:** `Vue 实例`
 
 - **Read only**
+- **只读**
 
 - **Details:**
+- **详细:**
 
   The root Vue instance of the current component tree. If the current instance has no parents this value will be itself.
+  当前组件树的根vue实例。如果当前实例没有父实例，这个值就代表当前Vue实例本身。
 
 ### vm.$children
 
 - **Type:** `Array<Vue instance>`
+- **类型:** `Array<Vue instance>`
 
 - **Read only**
+- **只读**
 
 - **Details:**
+- **详情:**
 
   The direct child components of the current instance. **Note there's no order guarantee for `$children`, and it is not reactive.** If you find yourself trying to use `$children` for data binding, consider using an Array and `v-for` to generate child components, and use the Array as the source of truth.
+  当前实例的直接子组件。**注意，这里不保证 `$children` 是有序的, 而且它不是反应式的。**如果你想要尝试使用`$children`来进行数据绑定，可以考虑使用一个数组和`v-for`来生成子组件，使用这个数组来作为数据来源。
 
 ### vm.$refs
 
 - **Type:** `Object`
+- **类型:** `Object`
 
 - **Read only**
+- **只读**
 
 - **Details:**
+- **详细:**
 
   An object that holds child components that have `ref` registered.
+  一个包含了注册过 `ref` 的子组件的对象.
 
 - **See also:**
+- **你也可以看这里:**
   - [Child Component Refs](/guide/components.html#Child-Component-Refs)
+  - [子组件索引](/guide/components.html#Child-Component-Refs)
   - [ref](#ref)
 
 ### vm.$isServer
 
 - **Type:** `boolean`
+- **类型:** `boolean`
 
 - **Read only**
+- **只读**
 
 - **Details:**
+- **详细:**
 
   Whether the current Vue instance is running on the server.
+  当前Vue实例是否运行在服务器端.
 
 - **See also:** [Server-Side Rendering](/guide/ssr.html)
+- **你也可以看这里:** [服务器端渲染](/guide/ssr.html)
 
 ## Instance Methods / Data
 
