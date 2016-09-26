@@ -513,10 +513,13 @@ type: api
 ### watch
 
 - **Type:** `{ [key: string]: string | Function | Object }`
+- **类型:** `{ [key: string]: string | Function | Object }`
 
 - **Details:**
+- **详细:**
 
   An object where keys are expressions to watch and values are the corresponding callbacks. The value can also be a string of a method name, or an Object that contains additional options. The Vue instance will call `$watch()` for each entry in the object at instantiation.
+  一个对象，键是观察表达式，值是对应回调。值也可以是方法名，或者是包含其他选项的对象。在实例化时为每个键调用 `$watch()` 。
 
 - **Example:**
 
@@ -530,8 +533,10 @@ type: api
         console.log('new: %s, old: %s', val, oldVal)
       },
       // string method name
+      // 方法名
       'b': 'someMethod',
       // deep watcher
+      // 深度watcher
       'c': {
         handler: function (val, oldVal) { /* ... */ },
         deep: true
@@ -541,7 +546,7 @@ type: api
   vm.a = 2 // -> new: 2, old: 1
   ```
 
-- **See also:** [Instance Methods - vm.$watch](#vm-watch)
+- **另见:** [实例方法 - vm.$watch](#vm-watch)
 
 ## Options / DOM
 
