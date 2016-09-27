@@ -685,41 +685,57 @@ type: api
 - **See also:** [Lifecycle Diagram](/guide/instance.html#Lifecycle-Diagram)
 
 ## Options / Assets
+## 选项 / 资源
 
 ### directives
 
 - **Type:** `Object`
+- **类型:** `Object`
 
 - **Details:**
 
   A hash of directives to be made available to the Vue instance.
+  一个对象，包含指令。
 
 - **See also:**
   - [Custom Directives](/guide/custom-directive.html)
   - [Assets Naming Convention](/guide/components.html#Assets-Naming-Convention)
+- **另见:**
+  - [自定义指令](/guide/custom-directive.html)
+  - [资源命名约定](/guide/components.html#Assets-Naming-Convention)
 
 ### filters
 
 - **Type:** `Object`
+- **类型:** `Object`
 
-- **Details:**
+- **详细:**
 
   A hash of filters to be made available to the Vue instance.
+  一个对象，包含过滤器
 
 - **See also:**
   - [Custom Filters](/guide/custom-filter.html)
   - [Assets Naming Convention](/guide/components.html#Assets-Naming-Convention)
+- **另见:**
+  - [自定义过滤器](/guide/custom-filter.html)
+  - [资源命名约定](/guide/components.html#Assets-Naming-Convention)
 
 ### components
 
 - **Type:** `Object`
+- **类型:** `Object`
 
 - **Details:**
+- **详细:**
 
   A hash of components to be made available to the Vue instance.
+  一个对象，包含组件
 
 - **See also:**
   - [Components](/guide/components.html)
+- **另见:**
+  - [组件](/guide/components.html)
 
 ## Options / Misc
 
