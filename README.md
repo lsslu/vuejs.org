@@ -48,7 +48,7 @@ api/index#Instance Methods/Data | [alfredcc](https://github.com/alfredcc) |egois
 api/index#Instance Methods/Eevents |
 api/index#Instance Methods/Lifecycle |
 api/index#Directives |
-api/index#Special Attributes |
+api/index#Special Attributes |[CoderKwong](https://github.com/CoderKwong)| | 翻译中
 api/index#Built-in Components |
 api/index#VNode Interface |
 api/index#Server-Side Rendering |
@@ -56,9 +56,9 @@ guide/installation |  [mrwiredancer](https://github.com/Mr-Wiredancer) | egoist 
 guide/index | [mrwiredancer](https://github.com/Mr-Wiredancer) | | 翻译中
 guide/instance |               
 guide/syntax |
-guide/computed |               
+guide/computed |[gongph](https://github.com/gongph) | | 翻译中                 
 guide/class-and-style |      
-guide/conditional |            
+guide/conditional |[MechanicianW](https://github.com/MechanicianW) | | 翻译中            
 guide/list |                   
 guide/events |                 
 guide/forms |   
