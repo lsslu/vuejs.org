@@ -693,6 +693,7 @@ type: api
 - **类型:** `Object`
 
 - **Details:**
+- **详细:**
 
   A hash of directives to be made available to the Vue instance.
   一个对象，包含指令。
@@ -709,6 +710,7 @@ type: api
 - **Type:** `Object`
 - **类型:** `Object`
 
+- **Details:**
 - **详细:**
 
   A hash of filters to be made available to the Vue instance.
