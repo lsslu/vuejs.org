@@ -697,7 +697,7 @@ type: api
 - **详细：**
 
   A hash of directives to be made available to the Vue instance.
-  一个哈希，包含了对 Vue 实例可见的指令。
+  一个哈希表，包含了对 Vue 实例可见的指令。
 
 - **See also:**
   - [Custom Directives](/guide/custom-directive.html)
@@ -716,7 +716,7 @@ type: api
 - **详细：**
 
   A hash of filters to be made available to the Vue instance.
-  一个哈希，包含了对 Vue 实例可见的过滤器。
+  一个哈希表，包含了对 Vue 实例可见的过滤器。
 
 - **See also:**
   - [Custom Filters](/guide/custom-filter.html)
@@ -735,7 +735,7 @@ type: api
 - **详细：**
 
   A hash of components to be made available to the Vue instance.
-  一个哈希，包含了对 Vue 实例可见的组件。
+  一个哈希表，包含了对 Vue 实例可见的组件。
 
 - **See also:**
   - [Components](/guide/components.html)
