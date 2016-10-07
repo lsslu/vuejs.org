@@ -48,7 +48,6 @@ functional | 函数化| e.g. `functional component` ：函数化组件
 
 文章 | 翻译 | 校对 | 状态 |
 ---- | ---- | ---- | ---- |
-<<<<<<< HEAD
 api/index#Global Config | mrwiredancer | egoist | ~~已完成~~
 api/index#Global API | pandazki |mrwiredancer | **校对中**
 api/index#Options/Data |[milkmeowo](https://github.com/milkmeowo)| egoist| ~~已完成~~
@@ -70,28 +69,6 @@ guide/index | [mrwiredancer](https://github.com/Mr-Wiredancer) | | `翻译中`
 guide/instance | [baurine](https://github.com/baurine)| mrwiredancer| **校对中**
 guide/syntax |[baurine](https://github.com/baurine)|egoist| **校对中**
 guide/computed |[gongph](https://github.com/gongph) |mrwiredancer | **校对中**
-=======
-api/index#Global Config | mrwiredancer | egoist | 校对中
-api/index#Global API | pandazki |mrwiredancer | 校对中
-api/index#Options/Data |
-api/index#Options/DOM |
-api/index#Options/Lifecycle Hooks |
-api/index#Options/Assets|
-api/index#Options/misc |
-api/index#Instance Properties | [dmxj](https://github.com/dmxj) || 翻译中
-api/index#Instance Methods/Data | [alfredcc](https://github.com/alfredcc) || 翻译中
-api/index#Instance Methods/Eevents |
-api/index#Instance Methods/Lifecycle |
-api/index#Directives |
-api/index#Special Attributes |
-api/index#Built-in Components |
-api/index#VNode Interface |
-api/index#Server-Side Rendering |
-guide/installation |  [mrwiredancer](https://github.com/Mr-Wiredancer) | egoist | 校对中
-guide/index | [mrwiredancer](https://github.com/Mr-Wiredancer) | | 翻译中
-guide/instance |
-guide/syntax |
-guide/computed | [gongph](https://github.com/gongph) | | 完成
 guide/class-and-style |
 guide/conditional |[MechanicianW](https://github.com/MechanicianW) | hayeah | ~~已完成~~
 guide/list |
