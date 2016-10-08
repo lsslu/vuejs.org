@@ -1,4 +1,4 @@
-﻿---
+---
 type: api
 ---
 ---
@@ -751,130 +751,187 @@ type: api
     - [渲染函数](/guide/render-function)
 
 ## Options / Lifecycle Hooks
+## 选项 / 生命周期钩子
 
 ### beforeCreate
 
 - **Type:** `Function`
+- **类型:** `Function`
 
 - **Details:**
+- **详细:**
 
   Called synchronously after the instance has just been initialized, before data observation and event/watcher setup.
+  在实例初始化之前同步调用。此时数据观察还没开始，事件和监听器也还没设置。
 
 - **See also:** [Lifecycle Diagram](/guide/instance.html#Lifecycle-Diagram)
+- **另见:** [生命周期图示](/guide/instance.html#Lifecycle-Diagram)
 
 ### created
 
 - **Type:** `Function`
+- **类型:** `Function`
 
 - **Details:**
+- **详细:**
 
   Called synchronously after the instance is created. At this stage, the instance has finished processing the options which means the following have been set up: data observation, computed properties, methods, watch/event callbacks. However, the mounting phase has not been started, and the `$el` property will not be available yet.
+  在实例创建之后同步调用。此时实例已经结束解析选项，这意味着已建立：数据绑定，计算属性，方法，监听器/事件回调。但是还没有开始挂载，所以 `$el` 还不存在。
 
 - **See also:** [Lifecycle Diagram](/guide/instance.html#Lifecycle-Diagram)
+- **另见:** [生命周期图示](/guide/instance.html#Lifecycle-Diagram)
 
 ### beforeMount
 
 - **Type:** `Function`
+- **类型:** `Function`
 
 - **Details:**
+- **详细:**
 
   Called right before the mounting begins: the `render` function is about to be called for the first time.
+  在挂载前调用： `render` 函数第一次被调用。
 
   **This hook is not called during server-side rendering.**
+  **这钩子在服务端渲染的时候不会被调用**
 
 - **See also:** [Lifecycle Diagram](/guide/instance.html#Lifecycle-Diagram)
+- **另见:** [生命周期图示](/guide/instance.html#Lifecycle-Diagram)
 
 ### mounted
 
 - **Type:** `Function`
+- **类型:** `Function`
 
 - **Details:**
+- **详细:**
 
   Called after the instance has just been mounted where `el` is replaced by the newly created `vm.$el`. If the root instance is mounted to an in-document element, `vm.$el` will also be in-document when `mounted` is called.
+  在挂载完成， `el` 被新建的 `vm.$el` 替换之后调用。如果根实例是挂载在文档中的元素，那么当 `mounted` 被调用的时候 `vm.$el` 也会在文档中
+  
+  > 译者注: 因为 Vue 2.0 使用了虚拟 Dom，所以挂载之后不一定在文档中(in-document)，也有可能是在上下文中(contextual)。
 
   **This hook is not called during server-side rendering.**
+  **这钩子在服务端渲染的时候不会被调用**
 
 - **See also:** [Lifecycle Diagram](/guide/instance.html#Lifecycle-Diagram)
+- **另见:** [生命周期图示](/guide/instance.html#Lifecycle-Diagram)
 
 ### beforeUpdate
 
 - **Type:** `Function`
+- **类型:** `Function`
 
 - **Details:**
+- **详细:**
 
   Called when the data changes, before the virtual DOM is re-rendered and patched.
+  当数据改变，在虚拟 Dom 重新渲染和打上补丁之前调用。
 
   You can perform further state changes in this hook and they will not trigger additional re-renders.
+  在这个钩子调用的时候，你可以执行进一步状态改变，这些改变不会触发其它额外的重渲染。
 
   **This hook is not called during server-side rendering.**
+  **这钩子在服务端渲染的时候不会被调用**
 
 - **See also:** [Lifecycle Diagram](/guide/instance.html#Lifecycle-Diagram)
+- **另见:** [生命周期图示](/guide/instance.html#Lifecycle-Diagram)
 
 ### updated
 
 - **Type:** `Function`
+- **类型:** `Function`
 
 - **Details:**
+- **详细:**
 
   Called after a data change causes the virtual DOM to be re-rendered and patched.
+  在数据改变，虚拟 Dom 重新渲染和打补丁之后调用。
 
   The component's DOM will be in updated state when this hook is called, so you can perform DOM-dependent operations in this hook. However, in most cases you should avoid changing state in this hook, because it may lead to an infinite update loop.
+  当钩子被调用的时候，组件的 DOM 将会处于更新状态, 因此你可以在这钩子中执行 DOM 相关操作. 但是，在绝大多数情况下，你应该避免在这钩子中改变状态，因为这有可能会导致死循环。
 
   **This hook is not called during server-side rendering.**
+  **这钩子在服务端渲染的时候不会被调用**
 
 - **See also:** [Lifecycle Diagram](/guide/instance.html#Lifecycle-Diagram)
+- **另见:** [生命周期图示](/guide/instance.html#Lifecycle-Diagram)
 
 ### activated
 
 - **Type:** `Function`
+- **类型:** `Function`
 
 - **Details:**
+- **详细:**
 
   Called when a kept-alive component is activated.
+  当一个 kept-alive 组件被激活的时候调用
 
   **This hook is not called during server-side rendering.**
+  **这钩子在服务端渲染的时候不会被调用**
 
 - **See also:**
+  - [Built-in Components - keep-alive](#keep-alive)
+  - [Dynamic Components - keep-alive](/guide/components.html#keep-alive)
+- **另见:**
   - [Built-in Components - keep-alive](#keep-alive)
   - [Dynamic Components - keep-alive](/guide/components.html#keep-alive)
 
 ### deactivated
 
 - **Type:** `Function`
+- **类型:** `Function`
 
 - **Details:**
+- **详细:**
 
   Called when a kept-alive component is deactivated.
+  当一个 kept-alive 组件被移除的时候调用
 
   **This hook is not called during server-side rendering.**
+  **这钩子在服务端渲染的时候不会被调用**
 
 - **See also:**
+  - [Built-in Components - keep-alive](#keep-alive)
+  - [Dynamic Components - keep-alive](/guide/components.html#keep-alive)
+- **另见:**
   - [Built-in Components - keep-alive](#keep-alive)
   - [Dynamic Components - keep-alive](/guide/components.html#keep-alive)
 
 ### beforeDestroy
 
 - **Type:** `Function`
+- **类型:** `Function`
 
 - **Details:**
+- **详细:**
 
   Called right before a Vue instance is destroyed. At this stage the instance is still fully functional.
+  在 Vue 实例销毁前调用。在这个阶段实例仍然是完全功能的。
 
   **This hook is not called during server-side rendering.**
+  **这钩子在服务端渲染的时候不会被调用**
 
 - **See also:** [Lifecycle Diagram](/guide/instance.html#Lifecycle-Diagram)
+- **另见:** [生命周期图示](/guide/instance.html#Lifecycle-Diagram)
 
 ### destroyed
 
 - **Type:** `Function`
+- **类型:** `Function`
 
 - **Details:**
+- **详细:**
 
   Called after a Vue instance has been destroyed. When this hook is called, all directives of the Vue instance have been unbound, all event listeners have been removed, and all child Vue instances have also been destroyed.
+  在实例被销毁后调用。当钩子被调用的时候，解绑所有指令，移除所有事件监听器，销毁所有的子实例。
 
   **This hook is not called during server-side rendering.**
+  **这钩子在服务端渲染的时候不会被调用**
 
 - **See also:** [Lifecycle Diagram](/guide/instance.html#Lifecycle-Diagram)
+- **另见:** [生命周期图示](/guide/instance.html#Lifecycle-Diagram)
 
 ## Options / Assets
 ## 选项 / 资源
@@ -935,28 +992,38 @@ type: api
   - [组件](/guide/components.html)
 
 ## Options / Misc
+## 选项 / 杂项
 
 ### parent
 
 - **Type:** `Vue instance`
+- **类型：** `Vue 实例`
 
 - **Details:**
+- **详细：**
 
   Specify the parent instance for the instance to be created. Establishes a parent-child relationship between the two. The parent will be accessible as `this.$parent` for the child, and the child will be pushed into the parent's `$children` array.
+  指定实例的父实例，在两者之间建立父子关系。子实例可以用 `this.$parent` 访问父实例，子实例被推入父实例的 `$children` 数组中。
 
   <p class="tip">Use `$parent` and `$children` sparringly - they mostly serve as an escape-hatch. Prefer using props and events for parent-child communication.</p>
+  <p class="tip">尽可能不去使用 `$parent` 和 `$children`。它们更多地是提供另外一种方法来实现父子间通信而已。在父子间通信中更**推荐**使用 props 和 events。</p>
 
 ### mixins
 
 - **Type:** `Array<Object>`
+- **类型：** `Array<Object>`
 
 - **Details:**
+- **详细：**
 
   The `mixins` option accepts an array of mixin objects. These mixin objects can contain instance options just like normal instance objects, and they will be merged against the eventual options using the same option merging logic in `Vue.extend()`. e.g. If your mixin contains a created hook and the component itself also has one, both functions will be called.
+  一个包含混合对象（mixin objects）的数组。这些混合对象可以像普通实例对象一样包含实例选项，它们将合并成一个最终选项对象，合并策略同 `Vue.extend()`。比如，如果混合对象包含一个 `created` 钩子，组件自身也包含一个，两个钩子函数都会被调用。
 
   Mixin hooks are called in the order they are provided, and called before the component's own hooks.
+  混合对象的钩子会按它们的出现顺序被调用，但是在组件自己的钩子之前被调用。
 
 - **Example:**
+- **示例：**
 
   ``` js
   var mixin = {
@@ -971,35 +1038,47 @@ type: api
   ```
 
 - **See also:** [Mixins](/guide/mixins.html)
+- **另见:** [Mixins](/guide/mixins.html)
 
 ### name
 
 - **Type:** `string`
+- **类型：** `string`
 
 - **Restriction:** only respected when used as a component option.
+- **限制：** 只在组件选项中使用。
 
 - **Details:**
+- **详细：**
 
   Allow the component to recursively invoke itself in its template. Note that when a component is registered globally with `Vue.component()`, the global ID is automatically set as its name.
+  允许组件在它的模板内递归地调用它自己。注意如果组件是由 `Vue.component()` 全局注册，全局 ID 自动作为它的名字。
 
   Another benefit of specifying a `name` option is debugging. Named components result in more helpful warning messages. Also, when inspecting an app in the Vue devtool, unnamed components will show up as `<AnonymousComponent>`, which isn't very informative. By providing the `name` option, you will get a much more informative component tree.
+  指定 `name` 选项的另一个好处是方便检查。 有命名的组件可以打印出更多有用的信息。同时，当使用 Vue devtool 调试的时候, 未命名的组件只会显示 `<AnonymousComponent>` 这对于调试来说没任何意义。传入 `name` 选项后， 你可以得到一个更有用的组件树结构，同时可以知道正在检查哪个组件。
 
 ### extends
 
 - **Type:** `Object | Function`
+- **类型：** `Object | Function`
 
 - **Details:**
+- **详细：**
 
   Allows declaratively extending another component (could be either a plain options object or a constructor) without having to use `Vue.extend`. This is primarily intended to make it easier to extend between single file components.
+  使用声明的方式来扩展另一个组件（可以是选项对象或者构造器），而不必使用 `Vue.extend`。主要作用是更容易的扩展单文件组件。
 
   This is similar to `mixins`, the difference being that the component's own options takes higher priority than the source component being extended.
+  这类似于 `mixins`，不同的是组件的选项比待扩展的源组件的选项优先。
 
 - **Example:**
+- **示例：**
 
   ``` js
   var CompA = { ... }
 
   // extend CompA without having to call Vue.extend on either
+  // 扩展 CompA，不用调用 Vue.extend
   var CompB = {
     extends: CompA,
     ...
@@ -1009,12 +1088,16 @@ type: api
 ### delimiters
 
 - **Type:** `Array<string>`
+- **类型：** `Array<string>`
 
 - **default:** `["{{", "}}"]`
+- **默认：** `["{{", "}}"]`
 
 - **Details:**
+- **详细：**
 
   Change the plain text interpolation delimiters. **This option is only available in the standalone build.**
+  修改文本插值的定界符。 **这选项只在独立编译版本有效**
 
 - **Example:**
 
@@ -1024,17 +1107,22 @@ type: api
   })
 
   // Delimiters changed to ES6 template string style
+  // 定界符改为ES6 模板字符串形式
   ```
 
 ### functional
 
 - **Type:** `boolean`
+- **类型：** `boolean`
 
 - **Details:**
+- **详细：**
 
   Causes a component to be stateless (no `data`) and instanceless (no `this` context). They are simply a `render` function that returns virtual nodes making them much cheaper to render.
+  使组件变成一个无状态（没有 `data`），无实例（没有 `this` 上下文）的函数化组件 这导致使用 `render` 函数把它们渲染成虚拟节点的时候变得更加高效。
 
 - **See also:** [Functional Components](/guide/render-function.html#Functional-Components)
+- **另见：** [函数化组件](/guide/render-function.html#Functional-Components)
 
 ## Instance Properties
 ##  实例属性
@@ -1180,59 +1268,79 @@ type: api
 - **另见：** [服务器端渲染](/guide/ssr.html)
 
 ## Instance Methods / Data
+## 实例方法 ／ 数据
 
 <h3 id="vm-watch">vm.$watch( expOrFn, callback, [options] )</h3>
 
 - **Arguments:**
+- **参数：**
   - `{string | Function} expOrFn`
   - `{Function} callback`
   - `{Object} [options]`
-    - `{boolean} deep`
-    - `{boolean} immediate`
+  - `{boolean} deep`
+  - `{boolean} immediate`
 
 - **Returns:** `{Function} unwatch`
+- **返回值：** `{Function} unwatch`
 
 - **Usage:**
+- **用法：**
 
   Watch an expression or a computed function on the Vue instance for changes. The callback gets called with the new value and the old value. The expression can be a single keypath or any valid binding expressions.
+  
+  观察 Vue 实例变化的一个表达式或计算函数。回调的参数为新值和旧值。表达式可以是某个键路径或任意合法绑定表达式。
 
 <p class="tip">Note: when mutating (rather than replacing) an Object or an Array, the old value will be the same as new value because they reference the same Object/Array. Vue doesn't keep a copy of the pre-mutate value.</p>
 
+<p class="tip">注意：在修改（不是替换）对象或数组时，旧值将与新值相同，因为他们索引同一个对象／数组。Vue 不会保留修改之前值的副本。</p>
+
 - **Example:**
+- **示例：**
 
   ``` js
   // keypath
+  // 键路径
   vm.$watch('a.b.c', function (newVal, oldVal) {
     // do something
+    // 做点什么
   })
 
   // expression
+  // 表达式
   vm.$watch('a + b', function (newVal, oldVal) {
     // do something
+    // 做点什么
   })
 
   // function
+  // 函数
   vm.$watch(
     function () {
       return this.a + this.b
     },
     function (newVal, oldVal) {
       // do something
+      // 做点什么
     }
   )
   ```
 
   `vm.$watch` returns an unwatch function that stops firing the callback:
+  
+  `vm.$watch` 返回一个取消观察函数，用来停止触发回调：
 
   ``` js
   var unwatch = vm.$watch('a', cb)
   // later, teardown the watcher
+  // 之后取消观察
   unwatch()
   ```
 
 - **Option: deep**
 
   To also detect nested value changes inside Objects, you need to pass in `deep: true` in the options argument. Note that you don't need to do so to listen for Array mutations.
+  
+  为了发现对象内部值的变化，可以在选项参数中指定 deep: true。注意监听数组的变动不需要这么做。
 
   ``` js
   vm.$watch('someObject', callback, {
@@ -1240,45 +1348,60 @@ type: api
   })
   vm.someObject.nestedValue = 123
   // callback is fired
+  // 触发回调
   ```
 
 - **Option: immediate**
 
   Passing in `immediate: true` in the option will trigger the callback immediately with the current value of the expression:
+  
+  在选项参数中指定 `immediate: true` 将立即以表达式的当前值触发回调：
 
   ``` js
   vm.$watch('a', callback, {
     immediate: true
   })
   // callback is fired immediately with current value of `a`
+  // 立即以 `a` 的当前值触发回调
   ```
 
 <h3 id="vm-set">vm.$set( object, key, value )</h3>
 
 - **Arguments:**
+- **参数：**
   - `{Object} object`
   - `{string} key`
   - `{any} value`
 
 - **Returns:** the set value.
+- **返回值：**设置的值
 
 - **Usage:**
+- **用法**
 
   This is the **alias** of the global `Vue.set`.
+  
+  这是全局 `Vue.set` 的 **别名**
 
 - **See also:** [Vue.set](#Vue-set)
+- **另见：** [Vue.set](#Vue-set)
 
 <h3 id="vm-delete">vm.$delete( object, key )</h3>
 
 - **Arguments:**
+- **参数：**
   - `{Object} object`
   - `{string} key`
 
 - **Usage:**
+- **用法：**
 
   This is the **alias** of the global `Vue.delete`.
+  
+  这是全局 `Vue.delete` 的 **别名**
 
 - **See also:** [Vue.delete](#Vue-delete)
+- **另见：** [Vue.delete](#Vue-delete)
 
 ## Instance Methods / Events
 
@@ -1767,13 +1890,21 @@ type: api
 
 ### key
 
-- **Expects:** `string`
+- **Expects:** `string` 
+- **特性：** `string`
 
   The `key` special attribute is primarily used as a hint for Vue's virtual DOM algorithm to identify VNodes when diffing the new list of nodes against the old list. Without keys, Vue uses an algorithm that minimizes element movement and tries to patch/reuse elements of the same type in-place as much as possible. With keys, it will reorder elements based on the order change of keys, and elements with keys that are no longer present will always be removed/destroyed.
 
+  当 Vue 的虚拟 DOM 算法差分计算新的节点列表和旧的节点列表，来识别 VNodes 时，key 这个特殊属性会为该算法提供线索。在不使用 keys 的情况下，Vue 会使用一个算法来减少元素的移动，并且尽可能在适当的位置，来修补/重新使用相同类型的元素。在使用 keys 的情况下，Vue 会基于 keys 的变化顺序来重新排列元素，那些包含 keys 但不再出现的元素通常将被移除/销毁。
+  
   Children of the same common parent must have **unique keys**. Duplicate keys will cause render errors.
 
+  具有相同父元素的子元素必须使用唯一 keys。重复 keys 会导致渲染报错。
+
   The most common use case is combined with `v-for`:
+
+  最常见的用例是结合 `v-for` 一起使用。
+
 
   ``` html
   <ul>
@@ -1783,8 +1914,13 @@ type: api
 
   It can also be used to force replacement of an element/component instead of reusing it. This can be useful when you want to:
 
+  也可以使用 key 属性来强行替换一个元素/组件而不是重新使用元素/组件。这种做法会很有用，当你想尝试以下做法：
+
   - Properly trigger lifecycle hooks of a component
   - Trigger transitions
+
+  - 适当地触发一个组件的生命周期钩子
+  - 触发过渡
 
   For example:
 
@@ -1796,11 +1932,17 @@ type: api
 
   When `text` changes, the `<span>` will always be replaced instead of patched, so a transition will be triggered.
 
+  当 text 变化时，<span> 元素也会跟着一起被替换而不是被修补，因此会触发一个过渡。
+
 ### ref
 
 - **Expects:** `string`
+- **特性：** `string`
+
 
   `ref` is used to register a reference to an element or a child component. The reference will be registered under the parent component's `$refs` object. If used on a plain DOM element, the reference will be that element; if used on a child component, the reference will be component instance:
+
+  使用 ref 属性来注册一个元素和子组件的引用。该引用被挂载到父组件的 `$refs` 对象下。如果在一个原生 DOM 元素上使用 ref ，该引用将会变成该元素；如果在一个子元素上使用 ref ,这个引用会变成该组件的实例：
 
   ``` html
   <!-- vm.$refs.p will the DOM node -->
@@ -1810,21 +1952,43 @@ type: api
   <child-comp ref="child"></child-comp>
   ```
 
+
+  ``` html
+  <!-- vm.$refs.p 将会变成 DOM 节点 -->
+  <p ref="p">hello</p>
+  <!-- vm.$refs.child 将会变成子元素的实例 -->
+  <child-comp ref="child"></child-comp>
+  ```
+
   When used on elements/components with `v-for`, the registered reference will be an Array containing DOM nodes or component instances.
+
+  当在含有 v-for 的元素/组件上使用 ref 属性时，被注册的引用会变成一个包含各 DOM 节点或者组件实例的数组。
 
   An important note about the ref registration timing: because the refs themselves are created as a result of the render function, you cannot access them on the initial render - they don't exist yet! `$refs` is also non-reactive, therefore you should not attempt to use it in templates for data-binding.
 
+  需要注意的一点是关于 ref 的注册时间点： 因为 refs 自身是作为 render 函数执行完后所创造的一个结果值，所以开发者不能再初始 render 时去使用它们，因为 refs 还不存在。`$refs` 也是不可交互的，因此开发者不要尝试在模板中为了数据绑定去使用它。
+
 - **See also:** [Child Component Refs](/guide/components.html#Child-Component-Refs)
+- **另见：** [Child Component Refs](/guide/components.html#Child-Component-Refs)
 
 ### slot
 
 - **Expects:** `string`
+- **特性：** `string`
+
 
   Used on content inserted into child components to indicate which named slot the content belongs to.
 
+  在插入到子组件的内容上使用 slot 属性，来表明哪个命名的 slot 是归该内容所属。
+
+
   For detailed usage, see the guide section linked below.
 
+  想知道更详细的用法，可参考以下链接
+
+
 - **See also:** [Named Slots](/guide/components.html#Named-Slots)
+- **另见：**[Named Slots](/guide/components.html#Named-Slots)
 
 ## Built-In Components
 ## 内置组件
