@@ -2206,8 +2206,10 @@ type: api
 - **另见：** [使用 Slots 内容分发](/guide/components.html#Content-Distribution-with-Slots)
 
 ## VNode Interface
+## VNode 接口
 
 - Please refer to the [VNode class declaration](https://github.com/vuejs/vue/blob/next/src/core/vdom/vnode.js).
+- 请参阅 [VNode 类声明](https://github.com/vuejs/vue/blob/next/src/core/vdom/vnode.js).
 
 ## Server-Side Rendering
 ## 服务端渲染
