@@ -18,6 +18,7 @@
 See also | 另见
 component | 组件
 functional | 函数化| e.g. `functional component` ：函数化组件
+reactive | 响应式的 
 
 
 参考 [vuejs-1.0 中文文档](http://cn.vuejs.org/)
@@ -44,49 +45,49 @@ functional | 函数化| e.g. `functional component` ：函数化组件
 * 校对通过则将 PR 改为`待合并`，并分配给协调员
 * 校对不通过则将 PR 改为 `待修改`，并分配给 PR 提交者
 
-## 进度表 (最后更新：2016-10-3 08:17)
+## 进度表 (最后更新：2016-10-5 08:52)
 
 文章 | 翻译 | 校对 | 状态 |
 ---- | ---- | ---- | ---- |
 api/index#Global Config | mrwiredancer | egoist | ~~已完成~~
-api/index#Global API | pandazki |mrwiredancer | **校对中**
+api/index#Global API | pandazki |mrwiredancer |  ~~已完成~~
 api/index#Options/Data |[milkmeowo](https://github.com/milkmeowo)| egoist| ~~已完成~~
-api/index#Options/DOM |[milkmeowo](https://github.com/milkmeowo)| Mr-Wiredancer | ~~已完成~~ 
-api/index#Options/Lifecycle Hooks |[milkmeowo](https://github.com/milkmeowo)| | **待校对**
+api/index#Options/DOM |[milkmeowo](https://github.com/milkmeowo)| Mr-Wiredancer | ~~已完成~~
+api/index#Options/Lifecycle Hooks |[milkmeowo](https://github.com/milkmeowo)| hayeah |  ~~已完成~~
 api/index#Options/Assets|[milkmeowo](https://github.com/milkmeowo)| Mr-Wiredancer|  ~~已完成~~
-api/index#Options/misc |[milkmeowo](https://github.com/milkmeowo)| | **校对中**
+api/index#Options/misc |[milkmeowo](https://github.com/milkmeowo)| hayeah |  ~~已完成~~
 api/index#Instance Properties | [dmxj](https://github.com/dmxj) |mrwiredancer| ~~已完成~~
 api/index#Instance Methods/Data | [alfredcc](https://github.com/alfredcc) |egoist| **校对中** `待修改`
 api/index#Instance Methods/Eevents |[dmxj](https://github.com/dmxj)| |`翻译中`
 api/index#Instance Methods/Lifecycle |[dmxj](https://github.com/dmxj)| | `翻译中`
 api/index#Directives |[dmxj](https://github.com/dmxj)| |`翻译中`
-api/index#Special Attributes |[aliencyl7](https://github.com/aliencyl7)| | `翻译中`
+api/index#Special Attributes |[aliencyl7](https://github.com/aliencyl7)| | **待校对**
 api/index#Built-in Components |[milkmeowo](https://github.com/milkmeowo)| mrwiredancer|~~已完成~~
 api/index#VNode Interface |[milkmeowo](https://github.com/milkmeowo)| | **校对中**
 api/index#Server-Side Rendering |[milkmeowo](https://github.com/milkmeowo)| hayeah | ~~已完成~~
 guide/installation |  [mrwiredancer](https://github.com/Mr-Wiredancer) | egoist | ~~已完成~~
 guide/index | [mrwiredancer](https://github.com/Mr-Wiredancer) | | `翻译中`
-guide/instance | [baurine](https://github.com/baurine)| mrwiredancer| **校对中**              
+guide/instance | [baurine](https://github.com/baurine)| mrwiredancer| **校对中**
 guide/syntax |[baurine](https://github.com/baurine)|egoist| **校对中**
-guide/computed |[gongph](https://github.com/gongph) |mrwiredancer | **校对中**                 
-guide/class-and-style |      
-guide/conditional |[MechanicianW](https://github.com/MechanicianW) | hayeah | ~~已完成~~            
-guide/list |                   
-guide/events |                 
-guide/forms |   
-guide/components |[MechanicianW](https://github.com/MechanicianW) | | `翻译中`             
+guide/computed |[gongph](https://github.com/gongph) |mrwiredancer | **校对中**
+guide/class-and-style |
+guide/conditional |[MechanicianW](https://github.com/MechanicianW) | hayeah | ~~已完成~~
+guide/list |
+guide/events | [rayax86](https://github.com/rayax86) | | `翻译中`
+guide/forms |
+guide/components |[MechanicianW](https://github.com/MechanicianW) |egoist | **校对中**
 guide/transitions |
 guide/transitioning-state |
-guide/render-function |        
-guide/reactivity |[pandazki](https://github.com/pandazki) | | `翻译中`
+guide/render-function | [pandazki](https://github.com/pandazki
+guide/reactivity |[pandazki](https://github.com/pandazki) |mrwiredancer | **校对中**
 guide/custom-directive |
-guide/mixins | [leon0204](https://github.com/leon0204) | | `翻译中`              
-guide/plugins |[leon0204](https://github.com/leon0204) | milkmeowo|**校对中**                 
-guide/single-file-components |
+guide/mixins | [leon0204](https://github.com/leon0204) | mrwiredancer | **校对中**
+guide/plugins |[leon0204](https://github.com/leon0204) | milkmeowo|**校对中**
+guide/single-file-components | [seaify](https://github.com/seaify) | | `翻译中`
 guide/routing |
-guide/state-management |       
-guide/unit-testing |[Yogi-Jiang](https://github.com/Yogi-Jiang) | mrwiredancer | **校对中** 
-guide/ssr |                    
-guide/migration |              
-guide/comparison |             
-guide/join | 
+guide/state-management |
+guide/unit-testing |[Yogi-Jiang](https://github.com/Yogi-Jiang) | mrwiredancer | **校对中**
+guide/ssr |
+guide/migration |
+guide/comparison |
+guide/join |
