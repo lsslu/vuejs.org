@@ -164,8 +164,7 @@
 <li><p><strong>默认值：</strong> <code>true</code> (<code>false</code> in production builds)</p>
 </li>
 <li><p><strong>用法：</strong></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// make sure to set this synchronously immediately after loading Vue</span></div><div class="line">Vue.config.devtools = <span class="literal">true</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 要保证在加载 Vue 之后同步地立刻设置</span></div><div class="line">Vue.config.devtools = <span class="literal">true</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// make sure to set this synchronously immediately after loading Vue</span></div><div class="line"><span class="comment">// 要保证在加载 Vue 之后同步地立刻设置</span></div><div class="line">Vue.config.devtools = <span class="literal">true</span></div></pre></td></tr></table></figure>
 <p>Configure whether to allow <a href="https://github.com/vuejs/vue-devtools" target="_blank" rel="external">vue-devtools</a> inspection. This option’s default value is <code>true</code> in development builds and <code>false</code> in production builds. You can set it to <code>true</code> to enable inspection for production builds.<br>配置是否允许 <a href="https://github.com/vuejs/vue-devtools" target="_blank" rel="external">vue-devtools</a> 进行检查。开发版默认为 <code>true</code>，生产版默认为 <code>false</code>。你可以在生产版中将它设为 <code>true</code> 来启用检查。</p>
 </li>
 </ul>
@@ -185,7 +184,6 @@
 <li><p><strong>默认值：</strong> <code>{}</code></p>
 </li>
 <li><p><strong>用法：</strong></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.config.keyCodes = &#123; <span class="attr">esc</span>: <span class="number">27</span> &#125;</div></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.config.keyCodes = &#123; <span class="attr">esc</span>: <span class="number">27</span> &#125;</div></pre></td></tr></table></figure>
 <p>Define custom key aliases for v-on.<br>为 v-on 定义自定义的按键别名。</p>
 </li>
