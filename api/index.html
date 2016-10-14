@@ -133,9 +133,8 @@
 </div>
 
     <h1></h1>
-    <hr>
-<h2 id="type-api"><a href="#type-api" class="headerlink" title="type: api"></a>type: api</h2><h2 id="Global-Config"><a href="#Global-Config" class="headerlink" title="Global Config"></a>Global Config</h2><h2 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h2><p><code>Vue.config</code> is an object containing Vue’s global configurations. You can modify its properties listed below before bootstrapping your application:<br><code>Vue.config</code> 是一个对象，包含 Vue 的全局配置。可以在启动应用之前修改以下属性：</p>
-<h3 id="silent"><a href="#silent" class="headerlink" title="silent"></a>silent</h3><h3 id="silent-1"><a href="#silent-1" class="headerlink" title="silent"></a>silent</h3><ul>
+    <h2 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h2><p><code>Vue.config</code> is an object containing Vue’s global configurations. You can modify its properties listed below before bootstrapping your application:<br><code>Vue.config</code> 是一个对象，包含 Vue 的全局配置。可以在启动应用之前修改以下属性：</p>
+<h3 id="silent"><a href="#silent" class="headerlink" title="silent"></a>silent</h3><ul>
 <li><strong>Type:</strong> <code>boolean</code></li>
 <li><p><strong>类型：</strong> <code>boolean</code></p>
 </li>
@@ -147,11 +146,10 @@
 </li>
 <li><p><strong>用法：</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.config.silent = <span class="literal">true</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.config.silent = <span class="literal">true</span></div></pre></td></tr></table></figure>
 <p>Suppress all Vue logs and warnings.<br>禁用 Vue.js 的所有日志和警告。</p>
 </li>
 </ul>
-<h3 id="optionMergeStrategies"><a href="#optionMergeStrategies" class="headerlink" title="optionMergeStrategies"></a>optionMergeStrategies</h3><h3 id="optionMergeStrategies-1"><a href="#optionMergeStrategies-1" class="headerlink" title="optionMergeStrategies"></a>optionMergeStrategies</h3><ul>
+<h3 id="optionMergeStrategies"><a href="#optionMergeStrategies" class="headerlink" title="optionMergeStrategies"></a>optionMergeStrategies</h3><ul>
 <li><strong>Type:</strong> <code>{ [key: string]: Function }</code></li>
 <li><p><strong>类型：</strong> <code>{ [key: string]: Function }</code></p>
 </li>
@@ -163,7 +161,6 @@
 </li>
 <li><p><strong>用法：</strong></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.config.optionMergeStrategies._my_option = <span class="function"><span class="keyword">function</span> (<span class="params">parent, child, vm</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> child + <span class="number">1</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> Profile = Vue.extend(&#123;</div><div class="line">  <span class="attr">_my_option</span>: <span class="number">1</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// Profile.options._my_option = 2</span></div></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line">Vue.config.optionMergeStrategies._my_option = <span class="function"><span class="keyword">function</span> (<span class="params">parent, child, vm</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> child + <span class="number">1</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> Profile = Vue.extend(&#123;</div><div class="line">  <span class="attr">_my_option</span>: <span class="number">1</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// Profile.options._my_option = 2</span></div></pre></td></tr></table></figure>
 <p>Define custom merging strategies for options.<br>为选项定义自定义的合并策略。</p>
 <p>The merge strategy receives the value of that option defined on the parent and child instances as the first and second arguments, respectively. The context Vue instance is passed as the third argument.<br>合并策略会接受在父实例和子实例中定义的选项值，以它们来分别作为第一和第二个参数。Vue 实例所在的上下文会作为第三个参数传递。</p>
 </li>
@@ -171,7 +168,7 @@
 </li>
 <li><strong>请参考</strong>：<a href="/guide/mixins.html#Custom-Option-Merge-Strategies">Custom Option Merging Strategies</a></li>
 </ul>
-<h3 id="devtools"><a href="#devtools" class="headerlink" title="devtools"></a>devtools</h3><h3 id="devtools-1"><a href="#devtools-1" class="headerlink" title="devtools"></a>devtools</h3><ul>
+<h3 id="devtools"><a href="#devtools" class="headerlink" title="devtools"></a>devtools</h3><ul>
 <li><strong>Type:</strong> <code>boolean</code></li>
 <li><p><strong>类型：</strong> <code>boolean</code></p>
 </li>
@@ -187,7 +184,7 @@
 <p>Configure whether to allow <a href="https://github.com/vuejs/vue-devtools" target="_blank" rel="external">vue-devtools</a> inspection. This option’s default value is <code>true</code> in development builds and <code>false</code> in production builds. You can set it to <code>true</code> to enable inspection for production builds.<br>配置是否允许 <a href="https://github.com/vuejs/vue-devtools" target="_blank" rel="external">vue-devtools</a> 进行检查。开发版默认为 <code>true</code>，生产版默认为 <code>false</code>。你可以在生产版中将它设为 <code>true</code> 来启用检查。</p>
 </li>
 </ul>
-<h3 id="errorHandler"><a href="#errorHandler" class="headerlink" title="errorHandler"></a>errorHandler</h3><h3 id="errorHandler-1"><a href="#errorHandler-1" class="headerlink" title="errorHandler"></a>errorHandler</h3><ul>
+<h3 id="errorHandler"><a href="#errorHandler" class="headerlink" title="errorHandler"></a>errorHandler</h3><ul>
 <li><strong>Type:</strong> <code>Function</code></li>
 <li><p><strong>类型：</strong> <code>Function</code></p>
 </li>
@@ -203,7 +200,7 @@
 <p>Assign a handler for uncaught errors during component render and watchers. The handler gets called with the error and the Vue instance.<br>为渲染过程和监视器中的未捕捉错误，分配一个处理器。这个处理器被调用的时候会得到错误和 Vue 实例。</p>
 </li>
 </ul>
-<h3 id="keyCodes"><a href="#keyCodes" class="headerlink" title="keyCodes"></a>keyCodes</h3><h3 id="keyCodes-1"><a href="#keyCodes-1" class="headerlink" title="keyCodes"></a>keyCodes</h3><ul>
+<h3 id="keyCodes"><a href="#keyCodes" class="headerlink" title="keyCodes"></a>keyCodes</h3><ul>
 <li><strong>Type:</strong> <code>{ [key: string]: number }</code></li>
 <li><p><strong>类型：</strong> <code>{ [key: string]: number }</code></p>
 </li>
@@ -219,7 +216,7 @@
 <p>Define custom key aliases for v-on.<br>为 v-on 定义自定义的按键别名。</p>
 </li>
 </ul>
-<h2 id="Global-API"><a href="#Global-API" class="headerlink" title="Global API"></a>Global API</h2><h2 id="全局-API"><a href="#全局-API" class="headerlink" title="全局 API"></a>全局 API</h2><h3 id="Vue-extend">Vue.extend( options )</h3>
+<h2 id="全局-API"><a href="#全局-API" class="headerlink" title="全局 API"></a>全局 API</h2><h3 id="Vue-extend">Vue.extend( options )</h3>
 
 <ul>
 <li><strong>Arguments:</strong></li>
@@ -1463,7 +1460,7 @@
 </li>
 </ul>
 <h2 id="Special-Attributes"><a href="#Special-Attributes" class="headerlink" title="Special Attributes"></a>Special Attributes</h2><h3 id="key"><a href="#key" class="headerlink" title="key"></a>key</h3><ul>
-<li><strong>Expects:</strong> <code>string</code> </li>
+<li><strong>Expects:</strong> <code>string</code></li>
 <li><p><strong>特性：</strong> <code>string</code></p>
 <p>The <code>key</code> special attribute is primarily used as a hint for Vue’s virtual DOM algorithm to identify VNodes when diffing the new list of nodes against the old list. Without keys, Vue uses an algorithm that minimizes element movement and tries to patch/reuse elements of the same type in-place as much as possible. With keys, it will reorder elements based on the order change of keys, and elements with keys that are no longer present will always be removed/destroyed.</p>
 <p>当 Vue 的虚拟 DOM 算法差分计算新的节点列表和旧的节点列表，来识别 VNodes 时，key 这个特殊属性会为该算法提供线索。在不使用 keys 的情况下，Vue 会使用一个算法来减少元素的移动，并且尽可能在适当的位置，来修补/重新使用相同类型的元素。在使用 keys 的情况下，Vue 会基于 keys 的变化顺序来重新排列元素，那些包含 keys 但不再出现的元素通常将被移除/销毁。</p>
@@ -1554,7 +1551,7 @@
 <ul>
 <li><code>name</code> - string，自动生成 CSS 过渡动画样式名字 例如： <code>name: &#39;fade&#39;</code> 将会生成 <code>.fade-enter</code>， <code>.fade-enter-active</code>等等。 默认是 <code>&quot;v&quot;</code>。</li>
 <li><code>appear</code> - boolean，初始渲染的时候是否执行过渡动画。默认 <code>false</code>.</li>
-<li><code>css</code> - boolean，是否使用 CSS 过渡动画样式。 默认 <code>true</code>。 如果设置为 <code>false</code>，只会触发在组件事件中注册的 JavaScript 钩子。 </li>
+<li><code>css</code> - boolean，是否使用 CSS 过渡动画样式。 默认 <code>true</code>。 如果设置为 <code>false</code>，只会触发在组件事件中注册的 JavaScript 钩子。</li>
 <li><code>type</code> - string，指定过渡事件的类型，以确定过渡结束时间，可用的值有 <code>&quot;transition&quot;</code> and <code>&quot;animation&quot;</code>。它会将持续时间较长的类型作为默认值。</li>
 <li><code>mode</code> - string， 控制离开/进入过渡动画的时间顺序。可用的模式有 <code>&quot;out-in&quot;</code> and <code>&quot;in-out&quot;</code>； 默认是同时。</li>
 <li><code>enter-class</code> - string</li>
