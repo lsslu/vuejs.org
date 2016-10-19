@@ -9,7 +9,7 @@ order: 16
 
 In addition to the default set of directives shipped in core (`v-model` and `v-show`), Vue also allows you to register your own custom directives. Note that in Vue 2.0, the primary form of code reuse and abstraction is components - however there may be cases where you just need some low-level DOM access on plain elements, and this is where custom directives would still be useful. An example would be focusing on an input element, like this one:
 
-除了vue默认提供的指令，vue也支持自定义指令。在Vue 2.0中，代码重用和抽象化的主要形式是组件化，但也有一些只需要对网页元素做一些低级的DOM操作的情况，此时自定义指令仍会非常有用。下面是一个置焦点到input上的例子：
+除了vue默认提供的指令(如：`v-model`，`v-show`)，vue也支持自定义指令。在Vue 2.0中，代码重用和抽象化的主要形式是组件化，但也有一些只需要对网页元素做一些低级的DOM操作的情况，此时自定义指令仍会非常有用。下面是一个置焦点到input上的例子：
 
 
 
@@ -95,12 +95,14 @@ A directive definition object can provide several hook functions (all optional):
 - 只触发一次，当指令解除绑定时触发。
 
 We'll explore the arguments passed into these hooks (i.e. `el`, `binding`, `vnode`, and `oldVnode`) in the next section.
-下一节我们将探讨以上这些钩子函数的参数
+
+下一节我们将探讨以上这些钩子函数（即`el`、`binding`、`vnode`和`oldVnode`）的参数
 
 ## Directive Hook Arguments
 ## 钩子函数的参数
 
 Directive hooks are passed these arguments:
+
 指令中的参数：
 
 - **el**: The element the directive is bound to. This can be used to directly manipulate the DOM.
@@ -118,7 +120,7 @@ Directive hooks are passed these arguments:
   - **arg**: The argument passed to the directive, if any. For example in `v-my-directive:foo`, the arg would be `"foo"`.
   - **arg**: 传递给指令的参数，可空。比如：`v-my-directive:foo`，则arg为`"foo"`
   - **modifiers**: An object containing modifiers, if any. For example in `v-my-directive.foo.bar`, the modifiers object would be `{ foo: true, bar: true }`.
-  - **modifiers**:
+  - **modifiers**: 
 - **vnode**: The virtual node produced by Vue's compiler.<!--See the [VNode API]([!!TODO: Add link to the VNode API doc when it exists]) for full details.-->
 - **vnode**: Vue编译产出的虚拟节点
 - **oldVnode**: The previous virtual node, only available in the `update` and `componentUpdated` hooks.
